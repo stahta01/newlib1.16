@@ -605,8 +605,6 @@ ELIX_LEVEL_0_FALSE
 ELIX_LEVEL_0_TRUE
 LDFLAGS
 NEWLIB_CFLAGS
-CCASFLAGS
-CCAS
 MAINT
 MAINTAINER_MODE_FALSE
 MAINTAINER_MODE_TRUE
@@ -656,6 +654,8 @@ build
 newlib_basedir
 MAY_SUPPLY_SYSCALLS_FALSE
 MAY_SUPPLY_SYSCALLS_TRUE
+CCASFLAGS
+CCAS
 target_alias
 host_alias
 build_alias
@@ -1815,6 +1815,13 @@ ac_cpp='$CPP $CPPFLAGS'
 ac_compile='$CC -c $CFLAGS $CPPFLAGS conftest.$ac_ext >&5'
 ac_link='$CC -o conftest$ac_exeext $CFLAGS $CPPFLAGS $LDFLAGS conftest.$ac_ext $LIBS >&5'
 ac_compiler_gnu=$ac_cv_c_compiler_gnu
+
+
+
+
+# Newer automakes demand CCAS and CCASFLAGS.
+: ${CCAS='$(CC)'}
+: ${CCASFLAGS='$(CFLAGS)'}
 
 
 
