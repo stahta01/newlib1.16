@@ -716,7 +716,7 @@ case "${target}" in
     noconfigdirs="$noconfigdirs ${libgcj}"
     ;;
   m6809-*-*)
-    noconfigdirs="$noconfigdirs target-libiberty target-libstdc++-v3 ${libgcj}"
+    noconfigdirs="$noconfigdirs target-libiberty target-libstdc++-v3 ${libgcj} ${sys_dir}"
     libgloss_dir=m6809
     ;;
   m68hc11-*-*|m6811-*-*|m68hc12-*-*|m6812-*-*)
