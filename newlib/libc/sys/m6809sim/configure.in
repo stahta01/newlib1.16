@@ -5,16 +5,11 @@ AC_PREREQ(2.59)
 AC_INIT([newlib],[NEWLIB_VERSION])
 AC_CONFIG_SRCDIR([kill.c])
 
-# Newer automakes demand CCAS and CCASFLAGS.
+# Newlib uses CCAS and CCASFLAGS; so, define them.
 : ${CCAS='$(CC)'}
 : ${CCASFLAGS='$(CFLAGS)'}
 AC_SUBST(CCAS)
 AC_SUBST(CCASFLAGS)
-
-dnl Can't be done in NEWLIB_CONFIGURE because that confuses automake. 
-AC_CONFIG_AUX_DIR(../../../..)
-
-NEWLIB_CONFIGURE(../../..)
 
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
