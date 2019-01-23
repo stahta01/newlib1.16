@@ -3,7 +3,14 @@ dnl Process this file with autoconf to produce a configure script.
 
 AC_PREREQ(2.59)
 AC_INIT([newlib],[NEWLIB_VERSION])
+AM_INIT_AUTOMAKE([newlib],[NEWLIB_VERSION])
+
 AC_CONFIG_SRCDIR([kill.c])
+
+
+AC_PROG_CC
+AM_PROG_CC_C_O
+AC_PROG_RANLIB
 
 # Newlib uses CCAS and CCASFLAGS; so, define them.
 : ${CCAS='$(CC)'}
