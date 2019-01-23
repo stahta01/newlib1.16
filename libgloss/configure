@@ -1848,6 +1848,13 @@ subdirs="$subdirs m68hc11"
 
 	config_testsuite=true
 	;;
+    m6809-*-*)
+
+
+subdirs="$subdirs m6809"
+
+	config_testsuite=true
+	;;
   fido-*-* | m68*-*-*)
 
 
